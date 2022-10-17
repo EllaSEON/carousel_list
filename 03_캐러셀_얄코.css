@@ -1,0 +1,73 @@
+/* 3D 참고 사이트 : https://www.inflearn.com/questions/27627 */
+html{
+  height:100%;
+  font-size:3rem;
+}
+
+@keyframes bingle{
+  to{
+    transform:rotateY(360deg);
+  }
+}
+
+/* stage 가장 상위요소를 3d로 만들어야함 */
+.stage{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100vw;
+  height:100vh;
+  background:powderblue;
+  perspective:1000px;
+}
+.carousel{
+  position:relative;
+  width:200px;
+  height:200px;
+  transform-style:preserve-3d;
+  animation:bingle 5s infinite linear;
+}
+.paused {
+  animation-play-state: paused;
+}
+.panel{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:absolute;
+  left:0;
+  top:0;
+  width:200px;
+  height:200px;
+  background:rgba(255,255,255,0.5);
+  border:1px solid black;
+  backface-visibility: hidden;
+}
+/* translateZ 계산식 : 개수가 변하는거에 따라서 거리가 달라져야지. 패널 개수가 많아질수록 거리가 멀어야지. translateZ 는 삼각함수 쓰면됨
+삼각함수 쓰면 간단해진다 */
+.panel:nth-child(1){
+  transform:rotateY(0deg) 
+        translateZ(173px);
+}
+.panel:nth-child(2){
+  transform:rotateY(60deg)
+         translateZ(173px);
+  
+}
+.panel:nth-child(3){
+  transform:rotateY(120deg)
+          translateZ(173px);
+}
+.panel:nth-child(4){
+  transform:rotateY(180deg)
+          translateZ(173px);
+}
+.panel:nth-child(5){
+  transform:rotateY(240deg)
+          translateZ(173px);
+
+}
+.panel:nth-child(6){
+  transform:rotateY(300deg)
+          translateZ(173px);
+}

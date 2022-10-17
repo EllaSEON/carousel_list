@@ -1,0 +1,20 @@
+.wrapper{
+  /* 넘치는 요소 숨겨줘 */
+  overflow:hidden;
+}
+.slide-container{
+  /* 브라우저 폭 == 100vw임. 300vw는 브라우저 폭의 3배  */
+  width:300vw;
+  /* 박스 왼쪽으로 이동하기 */
+  /* margin-left:-100vw; */
+  /* margin-left보다 부드러운 translateX */
+  transition: all 1s;
+}
+.slide-box{
+  width:100vw;
+  float:left;
+}
+.slide-box img{
+  /* 이미지 화면에 딱 맞게 배치해줘 */
+  width:100%;
+}

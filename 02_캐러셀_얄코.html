@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="02_캐러셀_얄코.css">
+</head>
+<body>
+    <div class="stage">
+      <div class="login">
+        <div class="box-side front">
+          <label>
+            <span class="label-text">ID</span>
+            <input type="text">
+          </label>
+        </div>
+        <div class="box-side back">B</div>
+      </div>
+    </div>
+
+<script>
+  const box = document.querySelector('.login');
+  box.addEventListener('click',function(){
+    document.body.classList.toggle('flipped');
+  })
+</script>
+</body>
+</html>

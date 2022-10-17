@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="캐러셀1.css">
+</head>
+<body>
+<!--1) 시작화면만들기, 미리 html,css로 만들어놔야함 -->
+
+    <div class="wrapper">
+        <div class="slide-container">
+            <div class="slide-box">
+            <img src="img/car1.png">
+            </div>
+            <div class="slide-box">
+            <img src="img/car2.png">
+            </div>
+            <div class="slide-box">
+            <img src="img/car3.png">
+            </div>
+        </div>
+    </div>
+
+    <button class="slide-1">1</button>
+    <button class="slide-2">2</button>
+    <button class="slide-3">3</button>
+
+
+<script>
+// document.querySelector('.slide-1').addEventListener('click',()=>{
+//     document.querySelector('.slide-container').style.transform='translateX(0vw)'
+// })    
+// document.querySelector('.slide-2').addEventListener('click',()=>{
+//     document.querySelector('.slide-container').style.transform='translateX(-100vw)'
+// })
+// document.querySelector('.slide-3').addEventListener('click',()=>{
+//     document.querySelector('.slide-container').style.transform='translateX(-200vw)'
+// })
+
+//변수로 저장해보기
+
+const 버튼1 = document.querySelector('.slide-1');
+const 버튼2 = document.querySelector('.slide-2');
+const 버튼3 = document.querySelector('.slide-3');
+
+// 버튼1.addEventListener('click',()=>{
+//     document.querySelector('.slide-container').style.transform='translateX(0vw)'
+// })
+// 버튼2.addEventListener('click',()=>{
+//     document.querySelector('.slide-container').style.transform='translateX(-100vw)'
+// })
+// 버튼3.addEventListener('click',()=>{
+//     document.querySelector('.slide-container').style.transform='translateX(-200vw)'
+// })
+
+//forEach 반복문으로 묶어보기
+// const btnArr = [버튼1,버튼2,버튼3]
+
+// btnArr.forEach((data,i)=>{
+//     data.addEventListener('click',()=>{
+//     document.querySelector('.slide-container').style.transform=`translateX(${-i}00vw)`
+//     })
+// })
+
+//for 반복문으로 묶어보기
+// const btnArr = [버튼1,버튼2,버튼3]
+
+// for(let i=0;i<btnArr.length;i++){
+//     btnArr[i].addEventListener('click',()=>{
+//     document.querySelector('.slide-container').style.transform=`translateX(${-i}00vw)`
+// })};
+
+</script>
+</body>
+</html>
